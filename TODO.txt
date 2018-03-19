@@ -1,0 +1,3 @@
+Needs:
+	Support for struct declaration
+	Saving Variables and asking the meanings of them

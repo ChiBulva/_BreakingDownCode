@@ -1,0 +1,19 @@
+
+The purpose of this program is to find a combination of moves a knight can make on a chessboard such that it hits each square exactly once. It uses a heuristic to do this, meaning that it only sometimes finds a solution.
+tourIsValid():
+	Takes in a 2D matrix representing a chessboard, along with ints representing the length and width of the chessboard. 
+	Searches through the matrix looking for any spaces the knight didn't get to.
+	Returns false if it finds any spaces that the knight didn't hit. If the knight hit every space, it returns true.
+printMatrix():
+	Takes in a 2D matrix representing a chessboard, along with ints representing the length and width of the chessboard. 
+	Prints the board to the console, marking any spaces the knight didn't move to with a dash (-).
+findInitialDegrees():
+	Takes in two ints representing the length and width of a chessboard.
+	Calculates how many moves to and from any given square a knight can make.
+	Returns the calculated values as a 2D array of ints.
+knightsTour():
+	Takes in two ints representing the length and width of a chessboard and two ints representing the knight's starting position.
+	Attempts to find a tour around the chessboard using the degrees calculated by findInitialDegrees() to decide which moves to make.
+	Returns a 2D array of ints that show the order of moves taken by the knight. Any spaces not reached have the value -1.
+main():
+	Runs knightsTour for various board sizes and starting positions and prints the results to the console.
