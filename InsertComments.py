@@ -1,12 +1,6 @@
+#import guiFile
+
 def main(TargerArray, Structure, function_location, function_list):
-    # Number of new lines after this call is ran
-    #    
-    #    num of functions       number of lines for comment           new numbers of lines
-    #
-    #           x           *        5                          =          new number
-    #
-    
-    
     #Node in C++
     #
     #  ///////////////////////////////////////////////////////
@@ -14,9 +8,6 @@ def main(TargerArray, Structure, function_location, function_list):
     #  //       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     #  //   
     #  ///////////////////////////////////////////////////////
-
-    #print("_____")
-
     newArray = []
     
     count = 0
@@ -31,6 +22,12 @@ def main(TargerArray, Structure, function_location, function_list):
         if(count!=len(function_location)-1):        
             if(num+1==function_location[count]):
                 funnum = funnum+1
+                #Use later when finishing GUI code
+                #
+                #code = []
+                #for i in range(int(function_location[count]),int(function_location[count+1])):
+                #    code.append(TargerArray[i])
+
                 #Cats out the function that you are describing
                 #
                 print(" ________________________________________________________________")
@@ -55,9 +52,9 @@ def main(TargerArray, Structure, function_location, function_list):
                     else:
                         InsertThis.append(description[num*50:(num+1)*50])
 
-                print("____\n")
-                print(lines)
-                print("____\n")
+                #print("____\n")
+                #print(lines)
+                #print("____\n")
 
                 #newArray.append("/*#------------------------------------------------------------|")
                 newArray.append("/*#############################################################|")

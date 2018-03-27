@@ -15,7 +15,7 @@ OriginalName = []
 FunctionLocation = []
 FunctionList = []
 
-x = "Heellllloooooo!\n"
+#x = "Heellllloooooo!\n"
 #Grabs a filename to comment out
 OriginalName = FindOrigninalName.main()
 #print(OriginalName)
@@ -44,7 +44,7 @@ Structure = GenerateStructure.main(StringsStripped, FunctionLocation, FunctionLi
 ComentedCode = InsertComments.main(TargetArray, Structure, FunctionLocation, FunctionList)
 
 #This section will save the new code stored as 'ComentedCode'
-#SaveCommentedCode.main(ComentedCode, OriginalName)
+SaveCommentedCode.main(ComentedCode, OriginalName)
 
 #Print statements from each function run
 print("---STRIPPING---\n")
@@ -66,6 +66,5 @@ print("---COMMENTED---\n")
 #    print(ComentedCode[num])
 
 print("--SAVING-CODE--\n")
-
 
 print("---END--FILE---\n")
