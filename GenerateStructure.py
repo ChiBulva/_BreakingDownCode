@@ -72,6 +72,11 @@ def main(TargetProgram, function_location, function_list):
                 for char in range(indented):
                     call = "	"+call
                 newArray.append(call)
+            elif("else" in TargetProgram[num] and "{" in TargetProgram[num]):
+                call = "else"
+                for char in range(indented):
+                    call = "	"+call
+                newArray.append(call)
             
         #Runs through each line of code
         #

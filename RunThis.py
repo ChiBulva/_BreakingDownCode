@@ -1,5 +1,6 @@
 import FindOrigninalName
 import GenerateStructure
+import GenerateStructureGUI
 import TargetProgram
 import StripStrings
 import InsertComments
@@ -40,11 +41,14 @@ FunctionLocation = FindFunctionLocation.main(StringsStripped)
 #Grabs function and create a structure of the program to reference points
 Structure = GenerateStructure.main(StringsStripped, FunctionLocation, FunctionList)
 
+#This will genorate a color coded GUI for the structure of the program selected
+GenerateStructureGUI.main(Structure, FunctionLocation, FunctionList, StringsStripped)
+
 #This section will eventually comment out your code
 ComentedCode = InsertComments.main(TargetArray, Structure, FunctionLocation, FunctionList)
 
 #This section will save the new code stored as 'ComentedCode'
-SaveCommentedCode.main(ComentedCode, OriginalName)
+#SaveCommentedCode.main(ComentedCode, OriginalName)
 
 #Print statements from each function run
 print("---STRIPPING---\n")
