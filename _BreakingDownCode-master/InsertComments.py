@@ -43,10 +43,11 @@ def main(TargerArray, Structure, function_location, function_list):
                 
                 #Use later to insert newlines for descriptions over length 50 or so
                 #
-                description = raw_input("Description of "+str(function_list[count]+"():"))
+                #description = input("Description of "+str(function_list[count]+"():"))
+                description = str(function_list[count])
                 lines = (len(description)/50)+1
                 InsertThis = []
-                for num in range(lines):
+                for num in range(int(lines)):
                     if(num==lines):
                         InsertThis.append(description[num*50:len(description)-1])
                     else:
@@ -62,7 +63,7 @@ def main(TargerArray, Structure, function_location, function_list):
                 newArray.append("  # Input:		fill in later")
                 newArray.append("  # Output:		fill in later")
                 newArray.append("  # Description of ():	")
-                #newArray.append("//#    "+str(raw_input("Description of "+str(function_list[count]+"():"))))
+                #newArray.append("//#    "+str(input("Description of "+str(function_list[count]+"():"))))
                 #newArray.append("  #	"+description)
                 for here in range(len(InsertThis)):
                     newArray.append("  #	"+str(InsertThis[here]))
